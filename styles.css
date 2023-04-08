@@ -1,0 +1,119 @@
+html body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(163, 188, 227);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.child1 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 30%;
+    position: relative;
+}
+
+#close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td {
+    height: 20px;
+    /* vertical-align: bottom; */
+    text-align: center;
+}
+
+td {
+    width: 150px;
+    /* set the width of the cell */
+    height: 50px;
+    /* set the height of the cell */
+    white-space: nowrap;
+    /* prevent the text from wrapping */
+    overflow: hidden;
+    /* hide any overflow content */
+}
+
+tr {
+    overflow-y: auto;
+    /* add a scrollbar if content exceeds cell height */
+}
+
+i {
+    cursor: pointer;
+}

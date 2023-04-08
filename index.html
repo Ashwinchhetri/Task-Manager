@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="child1">
+                <h1>Task Manager</h1>
+                <div class="sub-child">
+                    <h2 id="name-id" class="name-hai"></h2>
+                    <h2 class="sub-child1" id="task-info">No Task currently.</h2>
+                    <div class="grand-child1">
+                        <button type="button" class="sub-child2" id="open-modal" data-toggle="modal"
+                            data-target="#form">Add Task</button>
+                        <!-- <button>Filter</button> -->
+
+<!-- ---------------------------------------------------------------------------- -->
+                        <div>
+                            <label for="filter-task-name">Filter by Task Name:</label>
+                            <input type="text" id="myInput" onkeyup="myFunction()" name="filter-task-name">
+                          </div>
+                          
+                          <div>
+                            <label for="filter-status">Filter by Status:</label>
+                            <select id="filter-status" name="filter-status" onchange="myFunc()">
+                              <option value="">Select Status</option>
+                              <option value="pending">Pending</option>
+                              <option value="completed">Completed</option>
+                            </select>
+                          </div>
+                          
+                          <div>
+                            <label for="filter-due-date">Filter by Due Date:</label>
+                            <input type="date" id="filter-due-date" name="filter-due-date" onchange="myFun()">
+                          </div>
+                          
+<!-- -----------------------------------------------------------                           -->
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="child2" id="task-table">
+                
+            </div>
+        </div>
+        <div id="modal">
+            <div id="modal-content">
+                <span id="close-modal">&times;</span>
+                <h2>Tasks List</h2>
+                <form id="task-form">
+                    <div id="alert1">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Task added successfully!!
+                    </div>
+                    <div id="alert2">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Please fill in all the fields!!
+                    </div>
+                    <div class="form-group">
+                        <label for="task-name">Task Name</label>
+                        <input type="text" id="grocery" class="form-control" placeholder="Get groceries" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date" class="form-control" placeholder="29/04/2023" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="my-select">
+                            <option>Pending</option>
+                            <option>Completed</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="submit-button" onclick="getVal()">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
